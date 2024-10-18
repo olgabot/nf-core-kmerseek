@@ -49,18 +49,16 @@ SeqKit is a cross-platform and ultrafast toolkit for FASTA/Q file manipulation. 
 
 The default arguments are: `"--singleton --param-string '$alphabet,scaled=1,k=$ksize,abund'"`, where the alphabet (or moltype) is a protein alphabet, and the k-size (k-mer size) is an integer.
 
-
 #### Sourmash Multisearch (Branchwater Plugin)
 
 <details markdown="1">
 <summary>Output files</summary>
 
 - `sourmash/multisearch/`
-  - `*.multisearch.csv`: Results from searching 
-</details>
+  - `*.multisearch.csv`: Results from searching
+  </details>
 
 We use the [branchwater](https://github.com/sourmash-bio/sourmash_plugin_branchwater/) plugin for [`Sourmash`](https://sourmash.readthedocs.io/) to perform fast, parallelized search using Rust-optimized Python code. Specifically, we use the [`multisearch`](https://github.com/sourmash-bio/sourmash_plugin_branchwater/blob/main/doc/README.md#Running-multisearch-and-pairwise) plugin, which loads all the 'against' (aka 'target' or 'database') sketches into memory, and computes the [probability of overlap](https://github.com/sourmash-bio/sourmash_plugin_branchwater/pull/458) between the query and against sketches, useful for ranking matches that are less likely to be by chance.
-
 
 ### MultiQC
 
