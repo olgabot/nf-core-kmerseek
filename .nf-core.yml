@@ -3,9 +3,6 @@ nf_core_version: 3.0.2
 org_path: null
 repository_type: pipeline
 
-lint:
-  files_unchanged:
-    - docs/images/nf-core-kmerseek_logo_dark.png
 template:
   author: Olga Botvinnik
   description: Search for matching protein sequences using k-mers
